@@ -1,0 +1,41 @@
+name: 功能提案
+description: 討論新功能與可驗收結果
+title: "[功能提案] 需求摘要"
+body:
+  - type: markdown
+    attributes:
+      value: "請描述使用情境與預期結果；勿提供內部 Repo、主機、帳號、配置、路徑或檔案細節。"
+  - type: dropdown
+    id: track
+    attributes:
+      label: 開發線
+      options:
+        - OpenWrt 5.x
+        - OpenWrt 6.x
+        - Android
+        - 跨開發線
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用情境與目前痛點
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 預期行為與驗收條件
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: 適用公開版本、替代方式與限制
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: 公開內容確認
+      options:
+        - label: 此提案只包含可公開的功能需求與測試資訊。
+          required: true

@@ -1,0 +1,54 @@
+name: Bug 回報
+description: 回報可重現的 LD-1001 功能問題
+title: "[開發線][版本] 問題摘要"
+body:
+  - type: markdown
+    attributes:
+      value: "只提交功能與測試資訊。請勿提供私人 Repo、內部主機、帳號、配置、路徑、檔案細節或未去識別化紀錄。"
+  - type: dropdown
+    id: track
+    attributes:
+      label: 開發線
+      options:
+        - OpenWrt 5.x
+        - OpenWrt 6.x
+        - Android
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 完整公開版本與修訂號
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟與相關週邊
+      description: 提供必要的公開型號與連接方式，排除內部環境資訊。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期結果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 實際結果、頻率與恢復方式
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 最少必要的去識別化測試紀錄
+      description: 勿直接貼入完整 log 或開發環境截圖。
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: 公開內容確認
+      options:
+        - label: 我已移除內部開發與環境資訊、憑證及個人／裝置識別資料。
+          required: true
